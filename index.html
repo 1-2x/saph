@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="icon" type="image/png" href="misa.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    let text = " saph saph saph saph saph saph saph saph saph saph saph saph saph saph ";
+    let pos = 0;
+
+    function slideTitle() {
+        document.title = text.substring(pos) + text.substring(0, pos);
+        pos = (pos + 1) % text.length;
+        setTimeout(slideTitle, 100); // speed (ms)
+    }
+    slideTitle();
+});
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
